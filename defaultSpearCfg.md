@@ -7,9 +7,8 @@
 
 1. 拼spear配置地址:
 ```
-http://conf.voice.qcloud.com/index.php?sdk_appid=1400028285&interface=Voice_Conf_Download&platform=1
+http://conf.voice.qcloud.com/index.php?sdk_appid=1400028285&interface=Voice_Conf_Download&platform=1 (实际操作时，注意修改url中sdk_appid与platform(0--pc/web, 1--ios, 2--android, 4--mac)的值)
 ```
-实际操作时，注意修改url中sdk_appid与platform(0--pc/web, 1--ios, 2--android, 4--mac)的值;
 
 2. 拿第1步地址到浏览器中访问，即可拿到腾讯云Spear配置的json字符串,例如,
 ```json
