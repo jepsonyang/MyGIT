@@ -6,9 +6,9 @@
 ## 使用方法
 
 1. 拼spear配置地址:
-
+```
 http://conf.voice.qcloud.com/index.php?sdk_appid=1400028285&interface=Voice_Conf_Download&platform=1
-
+```
 实际操作时，注意修改url中sdk_appid与platform(0--pc/web, 1--ios, 2--android, 4--mac)的值;
 
 2. 拿第1步地址到浏览器中访问，即可拿到腾讯云Spear配置的json字符串,例如,
@@ -208,11 +208,11 @@ http://conf.voice.qcloud.com/index.php?sdk_appid=1400028285&interface=Voice_Conf
 ## 测试验证
 
 为了进行验证，可以通过修改hosts文件，让系统无法拉取spear配置，具体做法为:<br/>
-用记事本打开C:\Windows\System32\drivers\etc目录下的hosts文件，在最末尾加上一行"127.0.0.1	conf.voice.qcloud.com",此时ping conf.voice.qcloud.com,将会是127.0.0.1地址响应，如下图所示,
+用记事本打开C:\Windows\System32\drivers\etc目录下的hosts文件，在最末尾加上一行"127.0.0.1	conf.voice.qcloud.com",此时ping conf.voice.qcloud.com,将会是127.0.0.1地址响应，如下图所示,<br/>
 ![](https://mc.qcloudimg.com/static/img/6f901bcc483d7fb2e3ce15a9541f2632/2.png)
-此时已经无法访问conf.voice.qcloud.com,即无法拉取Spear配置了,此时即可运行程序验证是否为指定配置;
+<br/>此时已经无法访问conf.voice.qcloud.com,即无法拉取Spear配置了,此时即可运行程序验证是否为指定配置;
 
 ## 注意事项
-程序使用配置的优先顺序为: 
+程序使用配置的优先顺序为: <br/>
 拉取的spear配置 > 本地缓存的默认配置 > 添加的默认配置 > AVSDK自带的默认配置（直播场景）
-所以，在测试前，如果程序运行目录下，有“av_control_config_1400027849.config”类型的缓存配置信息，需要将此文件删除;
+<br/>所以，在测试前，如果程序运行目录下，有“av_control_config_1400027849.config”类型的缓存配置信息，需要将此文件删除;
